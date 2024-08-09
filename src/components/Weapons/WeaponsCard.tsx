@@ -22,14 +22,14 @@ export const WeaponCard: React.FC<{ weapon: IWeapon }> = ({ weapon }) => {
           />
         </div>
         {threeDisplay ? (
-          <div className="z-20 h-[400px] w-[400px] object-contain md:h-[350px] md:w-[350px] 2xl:h-[600px] 2xl:w-[600px]">
+          <div className="z-20 h-[300px] w-[300px] object-contain sm:h-[400px] sm:w-[400px] md:h-[350px] md:w-[350px] 2xl:h-[600px] 2xl:w-[600px]">
             <WeaponThree weaponModel={weapon.model} />
           </div>
         ) : (
           <img
             src={weapon.image}
             alt={weapon.name}
-            className="z-20 h-[400px] w-[400px] object-contain md:h-[350px] md:w-[350px]  2xl:h-[600px] 2xl:w-[600px]"
+            className="z-20 h-[300px] w-[300px] object-contain sm:h-[400px] sm:w-[400px] md:h-[350px] md:w-[350px]  2xl:h-[600px] 2xl:w-[600px]"
           />
         )}
       </div>

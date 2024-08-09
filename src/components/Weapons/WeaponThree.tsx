@@ -14,7 +14,7 @@ const Model: React.FC<{ model: string }> = ({ model }) => {
 
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y += 0.01; // Adjust the speed of the rotation here
+      modelRef.current.rotation.y += 0.01;
     }
   });
 
