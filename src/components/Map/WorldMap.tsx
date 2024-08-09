@@ -2,12 +2,10 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./WorldMap.css";
 import { MapPoint } from "./MapPoint";
-import { SectionTitle } from "../SectionTitle";
 
 export const WorldMap: React.FC = () => {
   return (
     <>
-      <SectionTitle title="World Map" />
       <MapContainer
         center={[51.505, -0.09]}
         zoom={3}
@@ -27,10 +25,10 @@ export const WorldMap: React.FC = () => {
           minZoom={3}
         />
         <MapPoint />
+        {/* To add : all the markers */}
+
         <Marker position={[51.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
+          <Popup>Temporary popup</Popup>
         </Marker>
       </MapContainer>
     </>

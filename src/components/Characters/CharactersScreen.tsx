@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { SectionTitle } from "../SectionTitle";
 import { charactersData } from "./CharactersData";
 import { CharactersDescription } from "./CharactersDescription";
 import { CharacterSelectedDetails } from "./CharacterSelectedDetails";
@@ -26,7 +25,6 @@ export const CharactersScreen: React.FC = () => {
 
   return (
     <div>
-      <SectionTitle title="CHARACTERS" />
       <div className="flex justify-between">
         {charactersData.map((character) => {
           const isActualCharacterSelected = characterSelected === character.id;

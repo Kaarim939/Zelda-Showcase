@@ -1,12 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame, Vector3, Euler } from "@react-three/fiber";
-import {
-  Environment,
-  OrbitControls,
-  PerspectiveCamera,
-  useGLTF,
-} from "@react-three/drei";
-import { SectionTitle } from "../SectionTitle";
+import { Environment, PerspectiveCamera, useGLTF } from "@react-three/drei";
 import { IStoryStep } from "./storyData";
 
 function Model(props: any) {
@@ -51,27 +45,24 @@ export const StoryScreen: React.FC<{ storyStep: IStoryStep }> = ({
   storyStep,
 }) => {
   return (
-    <>
-      <SectionTitle title="Characters" />
-      <Canvas style={{ height: "100vh", width: "auto" }}>
-        <CustomCamera
-          stepPosition={storyStep.position}
-          stepRotation={storyStep.rotation}
-        />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 10, 5]} intensity={0.8} castShadow />
-        <pointLight position={[-5, -5, -5]} intensity={0.6} decay={2} />
-        <spotLight
-          position={[10, 10, 10]}
-          angle={0.15}
-          penumbra={1}
-          intensity={1}
-          castShadow
-        />
-        <Model />
-        {/* Environment for reflections */}
-        <Environment files="/assets/masterSword/env.hdr" background={false} />
-      </Canvas>
-    </>
+    <Canvas style={{ height: "100vh", width: "auto" }}>
+      <CustomCamera
+        stepPosition={storyStep.position}
+        stepRotation={storyStep.rotation}
+      />
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[5, 10, 5]} intensity={0.8} castShadow />
+      <pointLight position={[-5, -5, -5]} intensity={0.6} decay={2} />
+      <spotLight
+        position={[10, 10, 10]}
+        angle={0.15}
+        penumbra={1}
+        intensity={1}
+        castShadow
+      />
+      <Model />
+      {/* Environment for reflections */}
+      <Environment files="/assets/masterSword/env.hdr" background={false} />
+    </Canvas>
   );
 };
