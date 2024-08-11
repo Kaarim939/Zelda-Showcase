@@ -82,7 +82,13 @@ export const CharactersScreen: React.FC = () => {
                 className="absolute bottom-0 left-0 block cursor-pointer rounded-tr-xl bg-[#fcf9ddfb] p-2 md:hidden"
                 onClick={() => setSliderOpen(true)}
               >
-                <img src={charactersIcon} className="h-16" />
+                <div className="flex items-center justify-center gap-2 font-custom">
+                  <img
+                    src={charactersIcon}
+                    className="h-16 rounded-xl bg-black bg-opacity-10 p-2"
+                  />{" "}
+                  <div className=" max-w-20">OTHERS CHARACTERS</div>
+                </div>
               </div>
               {/* When mobile CharaSlider is open*/}
               {sliderOpen && characterSelected && (
