@@ -239,7 +239,7 @@ export const charactersData: ICharacterData[] = [
     imgBack: charactersBackImages.mojoBackImg,
     race: "Tree",
     description:
-      "An giant tree who is dedicated to the protection of the forest.",
+      "A giant tree who is dedicated to the protection of the forest.",
     positionFullImg: "object-[57%,0%]",
     circleLogo: circleLogoImages.circleGreen,
     color: "#008000",
