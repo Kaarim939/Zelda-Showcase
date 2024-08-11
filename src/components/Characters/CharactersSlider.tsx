@@ -10,10 +10,10 @@ export const CharactersSlider: React.FC<{
   return (
     <div
       className={`bg-[#332927] 
-    bg-[url('/assets/ui/backSquareOp.png')] bg-[length:400px_400px] bg-repeat ${backButton ? "pt-7" : "py-2"} `}
+    bg-[url('/assets/ui/backSquareOp.png')] bg-[length:400px_400px] bg-repeat py-2`}
     >
       {backButton && (
-        <img src={backIcon} alt="Back" className="m-2" onClick={backButton} />
+        <img src={backIcon} alt="Back" className="mx-2" onClick={backButton} />
       )}
       <div
         className="m-auto flex grow flex-wrap justify-between gap-2 gap-y-2 
@@ -34,7 +34,7 @@ export const CharactersSlider: React.FC<{
               <img
                 src={chara.imgMini}
                 alt={chara.name}
-                className="h-16 w-max rounded-xl xl:h-20 "
+                className="h-16 w-40 rounded-xl xl:h-20 xl:w-52"
               />
             </div>
           );

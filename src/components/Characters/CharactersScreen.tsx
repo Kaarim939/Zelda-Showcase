@@ -13,7 +13,7 @@ export const CharactersScreen: React.FC = () => {
   const screenWeight = window.innerWidth;
   const [characterSelected, setCharacterSelected] = useState<
     undefined | number
-  >(screenWeight < 1000 ? 8 : undefined);
+  >(screenWeight < 1000 ? 1 : undefined);
   const [characterHovered, setCharacterHovered] = useState<undefined | number>(
     undefined,
   );
@@ -86,7 +86,7 @@ export const CharactersScreen: React.FC = () => {
               </div>
               {/* When mobile CharaSlider is open*/}
               {sliderOpen && characterSelected && (
-                <div className="w-fullmd:hidden absolute left-0 top-2 block h-full">
+                <div className="absolute left-0 top-0 block h-full w-full md:hidden">
                   <CharactersSlider
                     characterSelected={characterSelected}
                     changeCharacter={setCharacterSelected}
