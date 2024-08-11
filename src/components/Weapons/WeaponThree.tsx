@@ -44,7 +44,7 @@ export const WeaponThree: React.FC<{ weaponModel: string }> = ({
         enablePan={false}
       />
       {/* Environment for reflections */}
-      <Environment files="/assets/masterSword/env.hdr" background={false} />
+      <Environment files="/assets/env/env.hdr" background={false} />
     </Canvas>
   );
 };
