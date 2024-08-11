@@ -9,6 +9,6 @@
 }
 
 .leaflet-tile-container img {
-  width: 257px !important;
-  height: 257px !important;
+  width: 256px !important;
+  height: 256px !important;
 }
