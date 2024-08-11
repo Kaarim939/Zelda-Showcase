@@ -12,7 +12,6 @@ export const WeaponCard: React.FC<{ weapon: IWeapon }> = ({ weapon }) => {
       <div className="relative">
         <img
           src={hyruleLogo}
-          alt=""
           className="absolute bottom-0 left-0 right-0 top-0 m-auto h-full object-contain opacity-10"
         />
         <div className="absolute bottom-0 right-0 z-50 m-2">

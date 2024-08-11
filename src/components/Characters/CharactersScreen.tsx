@@ -5,6 +5,10 @@ import { CharacterSelectedDetails } from "./CharacterSelectedDetails";
 import { CharactersSlider } from "./CharactersSlider";
 import charactersIcon from "/assets/ui/characters.png";
 
+// The goal here was to create a screen that would display the characters of the game with fluid animations
+// The characters image are from the orignal game and the backgrounds are game screenshots
+// The whole component is pretty complex and can easly be simplified with spectific motions libraries but I wanted to make it from scratch
+
 export const CharactersScreen: React.FC = () => {
   const screenWeight = window.innerWidth;
   const [characterSelected, setCharacterSelected] = useState<
@@ -69,7 +73,6 @@ export const CharactersScreen: React.FC = () => {
                 )}
               <img
                 src={character.imgFull}
-                alt=""
                 className={`absolute  transform  object-cover  transition-all duration-300 ease-in-out 
                   ${!characterSelected ? `${character.positionFullImg} bottom-0 h-[500px] ` : ""} 
                   ${isActualCharacterHovered || isActualCharacterSelected ? "scale-125" : ""} 
@@ -79,9 +82,9 @@ export const CharactersScreen: React.FC = () => {
                 className="absolute bottom-0 left-0 block cursor-pointer rounded-tr-xl bg-[#fcf9ddfb] p-2 md:hidden"
                 onClick={() => setSliderOpen(true)}
               >
-                <img src={charactersIcon} alt="" className="h-16" />
+                <img src={charactersIcon} className="h-16" />
               </div>
-              {/* When mobile CharaSlider si open*/}
+              {/* When mobile CharaSlider is open*/}
               {sliderOpen && characterSelected && (
                 <div className="w-fullmd:hidden absolute left-0 top-2 block h-full">
                   <CharactersSlider
@@ -92,7 +95,6 @@ export const CharactersScreen: React.FC = () => {
                   />
                 </div>
               )}
-
               {/* When a the actual character hovered */}
               {isActualCharacterHovered && !characterSelected && (
                 <div className="absolute left-0 right-0 top-14 m-auto text-4xl font-bold text-white">
@@ -101,7 +103,6 @@ export const CharactersScreen: React.FC = () => {
               )}
               <img
                 src={character.imgBack}
-                alt=""
                 className="h-[500px] w-screen object-cover transition-transform duration-500 ease-in-out md:h-[700px]"
               />
             </div>

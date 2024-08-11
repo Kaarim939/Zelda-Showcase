@@ -14,7 +14,7 @@ export interface ICharacterData {
   imgBack: string;
   race: string;
   description: string;
-  positionFullImg: string;
+  positionFullImg: string; // Pretty bad practice, but it's the best way to do it without changing the images source and therefore have a smooth transition
   circleLogo: string;
   color: string;
   strength: number;

@@ -13,7 +13,7 @@ export const CharactersSlider: React.FC<{
     bg-[url('/assets/ui/backSquareOp.png')] bg-[length:400px_400px] bg-repeat ${backButton ? "pt-7" : "py-2"} `}
     >
       {backButton && (
-        <img src={backIcon} alt="" className="m-2" onClick={backButton} />
+        <img src={backIcon} alt="Back" className="m-2" onClick={backButton} />
       )}
       <div
         className="m-auto flex grow flex-wrap justify-between gap-2 gap-y-2 
@@ -21,24 +21,22 @@ export const CharactersSlider: React.FC<{
       >
         {charactersData.map((chara) => {
           return (
-            <>
-              <div
-                key={chara.id}
-                className={`rounded-xl ${characterSelected === chara.id ? "bg-white " : "bg-black"} 
+            <div
+              key={chara.id}
+              className={`rounded-xl ${characterSelected === chara.id ? "bg-white " : "bg-black"} 
                 cursor-pointer border border-white border-opacity-20 
                 bg-opacity-30 bg-[url('/assets/ui/backLabOp.png')] bg-[length:400px_400px] bg-repeat shadow-2xl`}
-                onClick={() => {
-                  changeCharacter(chara.id);
-                  handleClick();
-                }}
-              >
-                <img
-                  src={chara.imgMini}
-                  alt=""
-                  className="h-16 w-max rounded-xl xl:h-20 "
-                />
-              </div>
-            </>
+              onClick={() => {
+                changeCharacter(chara.id);
+                handleClick();
+              }}
+            >
+              <img
+                src={chara.imgMini}
+                alt={chara.name}
+                className="h-16 w-max rounded-xl xl:h-20 "
+              />
+            </div>
           );
         })}
       </div>
