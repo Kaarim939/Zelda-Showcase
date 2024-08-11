@@ -3,7 +3,7 @@ import {
   charactersFullImages,
   charactersMiniImages,
   circleLogoImages,
-} from "./CharactersImages";
+} from "./charactersImages";
 
 export interface ICharacterData {
   id: number;

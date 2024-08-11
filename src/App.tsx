@@ -4,7 +4,7 @@ import { HomePage } from "./routes/HomePage";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 
-export const App = () => {
+export const App: React.FC = () => {
   return (
     <Router>
       <Routes>
